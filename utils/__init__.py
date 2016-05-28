@@ -22,8 +22,6 @@ def default_get_identifier(obj_or_string):
     If not overridden, uses <app_label>.<object_name>.<pk>.
     """
     if isinstance(obj_or_string, six.string_types):
-        if not IDENTIFIER_REGEX.match(obj_or_string):
-            raise AttributeError("Provided string '%s' is not a valid identifier." % obj_or_string)
 
         return obj_or_string
 
